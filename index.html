@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JKT48FORALL — Koleksi Eksklusif All Generation 1-14</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#040b18',
+              900: '#061226',
+              800: '#0b1d3a',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    /* Clean Fluid Typography (Zero Overlap Across 360px Mobile & Desktop) */
+    .hero-brand-title {
+      font-size: clamp(1.85rem, 5.5vw, 3.6rem);
+      line-height: 1.15;
+      letter-spacing: 0.03em;
+      font-weight: 800;
+    }
+
+    .hero-headline {
+      font-size: clamp(1.15rem, 3.2vw, 2.1rem);
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+    }
+
+    /* Smooth Mask Blending so Left Text Area Always Sits on Pure Midnight Navy */
+    .hero-photo-blend {
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 32%, rgba(0, 0, 0, 0.95) 65%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.35) 32%, rgba(0, 0, 0, 0.95) 65%);
+    }
+
+    @media (max-width: 767px) {
+      .hero-photo-blend {
+        mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.14) 52%, transparent 88%);
+        -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.14) 52%, transparent 88%);
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body class="antialiased selection:bg-sky-500 selection:text-white pb-24">
+
+  <!-- ==================== 1. MINIMALIST TOP NAVBAR (64px) ==================== -->
+  <header class="sticky top-0 z-40 h-16 bg-[#061226]/95 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between">
+      <!-- Subtle Live Cloud Sync Status Pill -->
+      <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/10">
+        <span id="cloud-status-dot" class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+        <span id="cloud-status-text" class="text-[10px] font-semibold tracking-wider text-slate-300 uppercase">SYNC</span>
+      </div>
+
+      <!-- Centered Navigation Links -->
+      <nav class="flex items-center gap-6 sm:gap-8">
+        <a
+          href="#top"
+          onclick="scrollToTop(event)"
+          class="text-xs sm:text-sm font-semibold tracking-[0.16em] text-white hover:text-sky-400 transition uppercase"
+        >
+          HOME
+        </a>
+        <button
+          type="button"
+          onclick="openVipModal()"
+          class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-[0.16em] text-slate-300 hover:text-sky-400 transition uppercase"
+        >
+          <span>VIP</span>
+          <span
+            id="vip-nav-badge"
+            class="hidden px-2 py-0.5 text-[10px] font-bold rounded-full bg-sky-500 text-white tracking-normal leading-none"
+          >0</span>
+        </button>
+      </nav>
+
+      <!-- Right Owner Admin Studio Trigger -->
+      <button
+        type="button"
+        onclick="openAdminAuth()"
+        title="Owner Admin Studio"
+        aria-label="Owner Admin Studio"
+        class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center text-slate-300 hover:text-sky-400 transition"
+      >
+        <i data-lucide="settings" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== 2. CLEAN & PROPORTIONAL HERO SECTION ==================== -->
+  <section id="top" class="relative bg-[#061226] text-white overflow-hidden">
+    <!-- Subtle Ambient Glow -->
+    <div class="pointer-events-none absolute -top-28 -left-28 w-80 h-80 rounded-full bg-sky-500/10 blur-3xl"></div>
+
+    <!-- All-Member Background Photo (Right on Desktop, Soft Bottom on Mobile) -->
+    <div class="absolute inset-x-0 bottom-0 h-[62%] md:inset-y-0 md:left-auto md:right-0 md:h-full md:w-[62%] pointer-events-none select-none">
+      <img
+        id="hero-all-members-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/1280px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg"
+        onerror="this.onerror=null;this.src='https://placehold.co/1280x720/0b1d3a/38bdf8?text=JKT48+ALL+GENERATION';"
+        alt="Semua Member JKT48"
+        class="w-full h-full object-cover object-top hero-photo-blend opacity-90"
+      />
+      <!-- Protective Left & Vertical Navy Vignette for 100% Text Contrast -->
+      <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-[#061226] via-[#061226]/55 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#061226] via-transparent to-[#061226]/70"></div>
+    </div>
+
+    <!-- Hero Text & Actions Container -->
+    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-6 py-12 sm:py-16 lg:py-20">
+      <div class="max-w-2xl">
+        <!-- Row 1: Brand Title + Inline Pill Badge "48" -->
+        <div class="inline-flex items-center gap-2.5">
+          <h1 class="hero-brand-title text-white whitespace-nowrap">
+            JKT48FORALL
+          </h1>
+          <span class="bg-gradient-to-tr from-sky-500 to-rose-500 text-white text-xs sm:text-sm font-bold px-2.5 py-0.5 rounded-full shadow-sm select-none shrink-0">
+            48
+          </span>
+        </div>
+
+        <!-- Row 2: Clean Spaced Headline -->
+        <h2 class="hero-headline text-white uppercase mt-3 max-w-xl">
+          KOLEKSI EKSKLUSIF ALL GENERATION
+        </h2>
+
+        <!-- Row 3: Subtitle -->
+        <p class="text-slate-300 text-sm sm:text-base leading-[1.6] mt-3 max-w-md font-normal">
+          Pilih generasi favoritmu sekarang dan dapatkan akses eksklusif!
+        </p>
+
+        <!-- Row 4: Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a
+            href="#katalog-generasi"
+            class="px-6 py-3 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-semibold text-xs sm:text-sm tracking-wider whitespace-nowrap shadow-lg shadow-sky-500/25 transition active:scale-95"
+          >
+            PILIH GENERASI SEKARANG →
+          </a>
+
+          <button
+            type="button"
+            onclick="openPreviewModal(1)"
+            class="px-5 py-3 rounded-full border border-white/25 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm tracking-wider whitespace-nowrap backdrop-blur-sm transition active:scale-95"
+          >
+            LIHAT PREVIEW
+          </button>
+
+          <button
+            type="button"
+            onclick="openPriceListModal()"
+            class="px-5 py-3 rounded-full border border-white/25 bg-white/5 hover:bg-white/10 text-white font-medium text-xs sm:text-sm tracking-wider whitespace-nowrap backdrop-blur-sm transition active:scale-95"
+          >
+            LIHAT HARGA
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. MINIMALIST CATALOG (GEN 1–14) ==================== -->
+  <main id="katalog-generasi" class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-10 space-y-6">
+    <!-- Minimalist Section Header -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+          Pilih Generasi
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          Klik kartu untuk preview atau pilih beberapa gen untuk diskon otomatis
+        </p>
+      </div>
+
+      <button
+        type="button"
+        onclick="clearAllSelections()"
+        id="btn-reset-selection"
+        class="hidden self-start sm:self-auto px-3.5 py-1.5 rounded-full bg-slate-200/80 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition"
+      >
+        Reset Pilihan
+      </button>
+    </div>
+
+    <!-- Minimalist Generation Grid -->
+    <div id="generation-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+      <!-- Cards rendered dynamically via JS -->
+    </div>
+  </main>
+
+  <!-- ==================== 4. MINIMALIST FLOATING CHECKOUT BAR ==================== -->
+  <div
+    id="floating-checkout-bar"
+    class="fixed bottom-4 inset-x-0 z-30 px-4 pointer-events-none transition-all duration-300 translate-y-28 opacity-0"
+  >
+    <div class="max-w-2xl mx-auto bg-[#061226]/95 backdrop-blur-md text-white rounded-2xl px-4 py-3.5 sm:px-5 shadow-2xl border border-white/15 pointer-events-auto flex items-center justify-between gap-3">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2">
+          <span id="bar-gen-count" class="text-xs font-bold text-sky-400">0 Gen Dipilih</span>
+          <span id="bar-discount-badge" class="hidden px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-400/30 text-[10px] font-semibold">Hemat 0%</span>
+        </div>
+        <div class="flex items-baseline gap-2 mt-0.5">
+          <span id="bar-total-price" class="text-base sm:text-lg font-extrabold text-white">Rp 0</span>
+          <span id="bar-original-price" class="hidden text-xs text-slate-400 line-through">Rp 0</span>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        onclick="openCheckoutModal()"
+        class="shrink-0 px-5 py-2.5 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-semibold text-xs sm:text-sm tracking-wide shadow-lg shadow-sky-500/25 transition active:scale-95"
+      >
+        Lanjut Bayar →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== 5. MODAL: IDOL PREVIEW (PHOTO & VIDEO) ==================== -->
+  <div id="preview-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-navy-950/80 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-3xl max-h-[92vh] rounded-3xl border border-slate-200 overflow-hidden flex flex-col shadow-2xl">
+      <!-- Header -->
+      <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+        <div class="flex items-center gap-2.5">
+          <span id="prev-gen-badge" class="px-2.5 py-1 rounded-full bg-sky-500 text-white text-xs font-bold">GEN 1</span>
+          <div>
+            <h3 id="prev-modal-title" class="font-bold text-slate-900 text-base sm:text-lg leading-tight">Generasi 1</h3>
+            <p id="prev-modal-subtitle" class="text-xs text-slate-500">Preview Foto & Video Eksklusif</p>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="closeModal('preview-modal')"
+          class="w-9 h-9 rounded-full bg-slate-200/70 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition"
+        >
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Quick Gen 1-14 Switcher -->
+      <div id="prev-gen-switcher" class="px-4 py-2.5 bg-slate-100/70 border-b border-slate-200/70 flex items-center gap-1.5 overflow-x-auto"></div>
+
+      <!-- Preview Body -->
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-5 flex-1">
+        <!-- Main Media Viewer -->
+        <div class="relative rounded-2xl overflow-hidden bg-[#061226] aspect-video flex items-center justify-center border border-slate-200">
+          <img id="prev-main-image" src="" alt="Preview Generasi" class="w-full h-full object-cover" />
+          <video id="prev-main-video" controls playsinline class="hidden w-full h-full object-contain bg-black"></video>
+          <div class="absolute bottom-3 left-3 right-3 px-3.5 py-2 rounded-xl bg-navy-950/80 backdrop-blur-md text-white text-xs font-medium flex items-center justify-between">
+            <span id="prev-caption-text">Foto Resmi Generasi</span>
+            <span class="text-sky-400 font-bold">PREVIEW VIP</span>
+          </div>
+        </div>
+
+        <!-- Thumbnail Gallery -->
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Galeri Preview</span>
+            <span id="prev-media-count" class="text-xs font-semibold text-sky-600">1 Media</span>
+          </div>
+          <div id="prev-thumbs-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-2.5"></div>
+        </div>
+
+        <!-- Member Roster Pills -->
+        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">Member Generasi</span>
+          <div id="prev-members-list" class="flex flex-wrap gap-1.5"></div>
+        </div>
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="px-5 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <span class="text-xs text-slate-500 block">Harga Akses</span>
+          <span id="prev-gen-price" class="text-lg font-extrabold text-slate-900">Rp 20.000</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <button
+            type="button"
+            id="prev-toggle-cart-btn"
+            onclick="toggleCurrentPreviewInCart()"
+            class="px-4 py-2.5 rounded-full border border-slate-300 bg-white hover:bg-slate-100 text-slate-800 font-semibold text-xs sm:text-sm transition"
+          >
+            + Tambah ke Paket
+          </button>
+          <button
+            type="button"
+            onclick="buyCurrentPreviewNow()"
+            class="px-5 py-2.5 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-semibold text-xs sm:text-sm shadow-md shadow-sky-500/25 transition"
+          >
+            Berlangganan Gen Ini →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 6. MODAL: QRIS PAYMENT (GENTONG LUSELD) ==================== -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-navy-950/80 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-xl max-h-[94vh] rounded-3xl border border-slate-200 overflow-hidden flex flex-col shadow-2xl">
+      <!-- Header -->
+      <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+        <div>
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg">Pembayaran QRIS</h3>
+          <p class="text-xs text-slate-500">Scan QRIS sesuai nominal, lalu konfirmasi untuk membuka Link VIP</p>
+        </div>
+        <button
+          type="button"
+          onclick="closeModal('checkout-modal')"
+          class="w-9 h-9 rounded-full bg-slate-200/70 hover:bg-slate-200 flex items-center justify-center text-slate-600 transition"
+        >
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-5 flex-1">
+        <!-- Order Summary -->
+        <div class="bg-sky-50/70 border border-sky-200/80 rounded-2xl p-4 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-600">Paket Dipilih</span>
+            <span id="chk-discount-pill" class="hidden px-2.5 py-0.5 rounded-full bg-teal-600 text-white text-[11px] font-bold">Hemat 15%</span>
+          </div>
+          <div id="chk-selected-chips" class="flex flex-wrap gap-1.5"></div>
+          <div class="pt-2 border-t border-sky-200/70 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-600">Total Pembayaran</span>
+            <div class="text-right">
+              <span id="chk-original-total" class="hidden text-xs text-slate-400 line-through mr-1.5">Rp 0</span>
+              <span id="chk-final-total" class="text-xl font-extrabold text-sky-600">Rp 0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- QRIS Merchant Card (GENTONG LUSELD) -->
+        <div class="bg-white border-2 border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm text-center space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+            <div class="flex items-center gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-slate-900 text-white font-extrabold text-xs tracking-wider">QRIS</span>
+              <span class="text-[10px] font-medium text-slate-500 text-left leading-tight">QR Code Standar<br/>Pembayaran Nasional</span>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-sky-100 text-sky-800 font-bold text-[11px]">GPN</span>
+          </div>
+
+          <div>
+            <p class="font-extrabold text-base sm:text-lg text-slate-900 tracking-wide">GENTONG LUSELD</p>
+            <p class="text-xs font-medium text-slate-500">NMID : ID1026585063930</p>
+            <p class="text-[11px] font-semibold text-slate-400">A01</p>
+          </div>
+
+          <div class="mx-auto w-48 h-48 sm:w-52 sm:h-52 p-2.5 bg-white border border-slate-200 rounded-2xl shadow-inner flex items-center justify-center">
+            <svg id="qris-svg-matrix" viewBox="0 0 210 210" class="w-full h-full"></svg>
+          </div>
+
+          <div class="bg-slate-50 rounded-xl py-2 px-3 border border-slate-200/70">
+            <p class="text-[11px] text-slate-500">Nominal Pembayaran Tepat</p>
+            <p id="qris-amount-display" class="text-base font-extrabold text-slate-900">Rp 0</p>
+          </div>
+        </div>
+
+        <!-- Optional Buyer Details & Receipt Upload -->
+        <div class="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              Nama / Username Telegram <span class="text-slate-400 font-normal">(Opsional)</span>
+            </label>
+            <input
+              type="text"
+              id="chk-buyer-name"
+              placeholder="Contoh: @username_kamu"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-sm focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              Upload Bukti Transfer QRIS <span class="text-slate-400 font-normal">(Opsional)</span>
+            </label>
+            <input
+              type="file"
+              id="chk-receipt-file"
+              accept="image/*"
+              class="w-full text-xs text-slate-600 file:mr-3 file:py-2 file:px-3.5 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-sky-100 file:text-sky-700 hover:file:bg-sky-200 cursor-pointer"
+            />
+          </div>
+
+          <label class="flex items-start gap-2.5 pt-1 cursor-pointer select-none">
+            <input type="checkbox" id="chk-confirm-paid" class="mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500" />
+            <span class="text-xs text-slate-600 leading-relaxed">
+              Saya sudah mentransfer sesuai nominal ke QRIS <strong>GENTONG LUSELD</strong>.
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Footer Submit -->
+      <div class="p-4 sm:px-6 bg-slate-50 border-t border-slate-200">
+        <button
+          type="button"
+          id="btn-submit-payment"
+          onclick="confirmAndUnlockVip()"
+          class="w-full py-3.5 px-5 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-bold text-sm shadow-lg shadow-sky-500/25 transition flex items-center justify-center gap-2"
+        >
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+          <span>Konfirmasi Pembayaran</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 7. MODAL: INSTANT VIP TELEGRAM LINKS ==================== -->
+  <div id="vip-success-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-navy-950/85 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-lg max-h-[90vh] rounded-3xl border border-slate-200 overflow-hidden flex flex-col shadow-2xl">
+      <div class="p-6 bg-[#061226] text-white text-center space-y-2">
+        <div class="w-12 h-12 rounded-2xl bg-teal-500/20 border border-teal-400/40 text-teal-300 flex items-center justify-center mx-auto">
+          <i data-lucide="badge-check" class="w-7 h-7"></i>
+        </div>
+        <h3 class="text-xl font-bold tracking-tight">Pembayaran Dikonfirmasi!</h3>
+        <p id="vip-order-ref" class="text-xs text-sky-300 font-medium">Order #JKT48-0000 • Laporan otomatis terkirim</p>
+      </div>
+
+      <div class="p-5 overflow-y-auto space-y-3 flex-1">
+        <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">
+          Link Grup Telegram VIP Kamu:
+        </p>
+        <div id="vip-unlocked-links-list" class="space-y-2.5"></div>
+      </div>
+
+      <div class="p-4 bg-slate-50 border-t border-slate-200">
+        <button
+          type="button"
+          onclick="closeModal('vip-success-modal')"
+          class="w-full py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm transition"
+        >
+          Selesai & Simpan ke Menu VIP
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 8. MODAL: PRICE LIST ("LIHAT HARGA") ==================== -->
+  <div id="price-list-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-navy-950/80 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-3xl max-h-[90vh] rounded-3xl border border-slate-200 overflow-hidden flex flex-col shadow-2xl">
+      <div class="px-5 py-4 border-b border-slate-200 flex items-center justify-between bg-[#061226] text-white">
+        <div>
+          <h3 class="font-bold text-base sm:text-lg leading-tight">Daftar Harga & Paket Hemat</h3>
+          <p class="text-xs text-sky-300 mt-0.5">Beli 2, 3, atau 4+ generasi otomatis mendapat diskon</p>
+        </div>
+        <button type="button" onclick="closeModal('price-list-modal')" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-5 flex-1">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+            <span class="text-[11px] font-medium text-slate-500 block">1 Generasi</span>
+            <span class="text-sm font-bold text-slate-900 mt-0.5 block">Harga Normal</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-sky-50 border border-sky-200 text-center">
+            <span class="text-[11px] font-medium text-sky-700 block">2 Generasi</span>
+            <span class="text-sm font-bold text-sky-800 mt-0.5 block">Hemat 15%</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-blue-50 border border-blue-200 text-center">
+            <span class="text-[11px] font-medium text-blue-700 block">3 Generasi</span>
+            <span class="text-sm font-bold text-blue-800 mt-0.5 block">Hemat 25%</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-teal-50 border border-teal-200 text-center">
+            <span class="text-[11px] font-medium text-teal-700 block">4+ Generasi</span>
+            <span class="text-sm font-bold text-teal-800 mt-0.5 block">Hemat 35%</span>
+          </div>
+        </div>
+
+        <div id="price-list-rows" class="divide-y divide-slate-100 border border-slate-200 rounded-2xl overflow-hidden"></div>
+      </div>
+
+      <div class="p-4 sm:px-6 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-3">
+        <div class="text-xs">
+          <span class="text-slate-500">Terpilih:</span>
+          <strong id="pl-selected-count" class="text-slate-900 font-bold">0 Gen</strong>
+          <span id="pl-selected-total" class="ml-1.5 text-sky-600 font-bold"></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="closeModal('price-list-modal')" class="px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-100">
+            Tutup
+          </button>
+          <button
+            type="button"
+            onclick="proceedCheckoutFromPriceList()"
+            class="px-5 py-2 rounded-full bg-sky-500 hover:bg-sky-400 text-white text-xs font-semibold shadow transition"
+          >
+            Lanjut Bayar →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 9. MODAL: MY UNLOCKED VIP LINKS ("VIP" NAV) ==================== -->
+  <div id="vip-history-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 bg-navy-950/80 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-lg max-h-[88vh] rounded-3xl border border-slate-200 overflow-hidden flex flex-col shadow-2xl">
+      <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+        <div>
+          <h3 class="font-bold text-slate-900 text-base sm:text-lg">Akses Grup VIP Saya</h3>
+          <p class="text-xs text-slate-500">Link grup Telegram VIP yang sudah kamu buka</p>
+        </div>
+        <button type="button" onclick="closeModal('vip-history-modal')" class="w-9 h-9 rounded-full bg-slate-200/70 hover:bg-slate-200 flex items-center justify-center text-slate-600">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div id="vip-history-content" class="p-5 overflow-y-auto space-y-3 flex-1"></div>
+    </div>
+  </div>
+
+  <!-- ==================== 10. MODAL: OWNER PIN LOGIN ==================== -->
+  <div id="admin-pin-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/85 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-sm rounded-3xl border border-slate-200 p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-900 text-base">Owner Admin Studio</h3>
+            <p class="text-[11px] text-slate-500">Masukkan PIN Owner</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal('admin-pin-modal')" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div>
+        <input
+          type="password"
+          id="admin-pin-input"
+          maxlength="8"
+          placeholder="PIN Owner (Default: 4848)"
+          onkeydown="if(event.key==='Enter') verifyAdminPin()"
+          class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-300 text-center font-bold tracking-[0.25em] text-slate-900 focus:outline-none focus:border-sky-500"
+        />
+        <p id="admin-pin-error" class="hidden text-xs font-semibold text-amber-600 mt-1.5 text-center">PIN salah. Silakan coba lagi.</p>
+      </div>
+
+      <button
+        type="button"
+        onclick="verifyAdminPin()"
+        class="w-full py-3 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-bold text-sm shadow-md transition"
+      >
+        Masuk Panel Owner
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== 11. MODAL: OWNER ADMIN STUDIO ==================== -->
+  <div id="admin-panel-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-2 sm:p-5 bg-navy-950/85 backdrop-blur-sm">
+    <div class="bg-white w-full max-w-4xl max-h-[94vh] rounded-3xl border border-slate-200 overflow-hidden flex flex-col shadow-2xl">
+      <div class="px-5 py-4 bg-[#061226] text-white flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="px-2.5 py-0.5 rounded-full bg-sky-500 text-white text-xs font-bold">OWNER</span>
+          <div>
+            <h3 class="font-bold text-base sm:text-lg leading-tight">JKT48FORALL Admin Studio</h3>
+            <p class="text-[11px] text-sky-300">Kelola Banner Member, Preview Foto/Video, Harga & Link VIP</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal('admin-panel-modal')" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Admin Tabs -->
+      <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-200 flex items-center gap-2 overflow-x-auto">
+        <button type="button" onclick="switchAdminTab('hero')" id="tab-btn-hero" class="admin-tab-btn px-3.5 py-2 rounded-full text-xs font-bold bg-sky-500 text-white shrink-0">
+          1. Banner Semua Member
+        </button>
+        <button type="button" onclick="switchAdminTab('gens')" id="tab-btn-gens" class="admin-tab-btn px-3.5 py-2 rounded-full text-xs font-bold bg-white text-slate-600 hover:bg-slate-200/70 shrink-0">
+          2. Harga, Foto & Link VIP
+        </button>
+        <button type="button" onclick="switchAdminTab('previews')" id="tab-btn-previews" class="admin-tab-btn px-3.5 py-2 rounded-full text-xs font-bold bg-white text-slate-600 hover:bg-slate-200/70 shrink-0">
+          3. Upload Preview Foto & Video
+        </button>
+        <button type="button" onclick="switchAdminTab('bot')" id="tab-btn-bot" class="admin-tab-btn px-3.5 py-2 rounded-full text-xs font-bold bg-white text-slate-600 hover:bg-slate-200/70 shrink-0">
+          4. Riwayat Order & Cloud
+        </button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="p-4 sm:p-6 overflow-y-auto flex-1 space-y-6">
+        <!-- TAB 1: HERO IMAGE -->
+        <div id="admin-tab-hero" class="space-y-4">
+          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-4">
+            <h4 class="font-bold text-slate-900 text-sm">Gambar Banner Utama (Semua Member JKT48)</h4>
+            <div class="rounded-2xl overflow-hidden bg-[#061226] aspect-[16/7] border border-slate-300">
+              <img id="admin-hero-preview" src="" alt="Banner Preview" class="w-full h-full object-cover object-top" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Upload File Gambar Baru (Auto-Kompres Cloud)</label>
+                <input
+                  type="file"
+                  id="admin-hero-file"
+                  accept="image/*"
+                  onchange="handleHeroImageUpload(event)"
+                  class="w-full text-xs text-slate-600 file:mr-3 file:py-2 file:px-3.5 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-sky-500 file:text-white hover:file:bg-sky-600 cursor-pointer"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Atau Tempel URL Gambar</label>
+                <div class="flex gap-2">
+                  <input
+                    type="url"
+                    id="admin-hero-url"
+                    placeholder="https://..."
+                    class="flex-1 px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs"
+                  />
+                  <button
+                    type="button"
+                    onclick="saveHeroImageUrl()"
+                    class="px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800"
+                  >
+                    Terapkan
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 flex justify-between items-center">
+              <button type="button" onclick="resetHeroImageDefault()" class="text-xs font-semibold text-slate-500 hover:text-slate-800 underline">
+                Kembalikan Gambar Default
+              </button>
+              <span id="hero-sync-badge" class="text-[11px] text-teal-600 font-semibold">✓ Tersinkronisasi Real-Time ke Semua Pengunjung</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: GEN 1-14 CONFIG -->
+        <div id="admin-tab-gens" class="hidden space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <p class="text-xs text-slate-600">Atur harga satuan, foto sampul generasi, dan <strong>Link Grup Telegram VIP</strong> (tersinkronisasi live ke cloud).</p>
+            <button
+              type="button"
+              onclick="saveAllGenerationsConfig()"
+              class="px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold shadow shrink-0"
+            >
+              Simpan ke Cloud
+            </button>
+          </div>
+          <div id="admin-gens-editor-list" class="space-y-3"></div>
+        </div>
+
+        <!-- TAB 3: UPLOAD PREVIEW MEDIA -->
+        <div id="admin-tab-previews" class="hidden space-y-5">
+          <div class="bg-sky-50/70 border border-sky-200 rounded-2xl p-4 space-y-3">
+            <h4 class="font-bold text-slate-900 text-sm">Tambah Media Preview Baru (Foto Cloud atau Link Video)</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Pilih Generasi</label>
+                <select id="adm-prev-gen-select" class="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-xs font-semibold"></select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Judul / Keterangan Preview</label>
+                <input
+                  type="text"
+                  id="adm-prev-caption"
+                  placeholder="Contoh: Teaser Photopack & Video Greeting Gen 7"
+                  class="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-xs"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Upload File Foto (Auto-Kompres & Sinkron Cloud)</label>
+                <input
+                  type="file"
+                  id="adm-prev-file"
+                  accept="image/*,video/*"
+                  class="w-full text-xs text-slate-600 file:mr-3 file:py-2 file:px-3.5 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-sky-500 file:text-white hover:file:bg-sky-600 cursor-pointer"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Atau Tempel URL Foto / Video (.mp4)</label>
+                <input
+                  type="url"
+                  id="adm-prev-media-url"
+                  placeholder="https://example.com/preview.mp4 atau .jpg"
+                  class="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs"
+                />
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <button
+                type="button"
+                onclick="uploadCustomPreviewMedia()"
+                class="py-2.5 px-5 rounded-full bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow transition"
+              >
+                + Simpan & Sinkronkan ke Preview
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm mb-2">Daftar Media Preview Aktif (Cloud)</h4>
+            <div id="adm-uploaded-previews-list" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+          </div>
+        </div>
+
+        <!-- TAB 4: ORDERS, BOT SETTINGS & CLOUD CONFIG -->
+        <div id="admin-tab-bot" class="hidden space-y-5">
+          <!-- Real-time Order Logs from Firestore -->
+          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-slate-900 text-sm">Riwayat Order Masuk (Real-Time Cloud)</h4>
+              <span id="adm-orders-count" class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 text-[11px] font-bold">0 Order</span>
+            </div>
+            <div id="adm-orders-list" class="max-h-48 overflow-y-auto space-y-2">
+              <p class="text-xs text-slate-400 text-center py-3">Belum ada transaksi tercatat di cloud.</p>
+            </div>
+          </div>
+
+          <!-- Bot Notification Config -->
+          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-slate-900 text-sm">Integrasi Bot Laporan (@laporanbayar_bot)</h4>
+              <span class="px-2.5 py-0.5 rounded-full bg-teal-100 text-teal-800 text-[11px] font-bold">API Aktif</span>
+            </div>
+            <p class="text-xs text-slate-600">
+              Laporan pembayaran otomatis terkirim ke ID Admin Telegram tujuan melalui <code class="bg-slate-200 px-1.5 py-0.5 rounded text-slate-800">@laporanbayar_bot</code>.
+            </p>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">ID Admin Penerima Laporan Telegram</label>
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input type="text" id="adm-bot-chat-id" value="8536139561" placeholder="8536139561" class="flex-1 px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 font-mono text-xs font-bold text-slate-900" />
+                <button type="button" onclick="saveBotChatIdManual()" class="px-4 py-2.5 rounded-full bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold">
+                  Simpan ID Admin
+                </button>
+              </div>
+            </div>
+
+            <div class="pt-1">
+              <button type="button" onclick="sendTestReportToBot()" class="px-4 py-2 rounded-full bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold">
+                Kirim Test Laporan ke Telegram
+              </button>
+            </div>
+          </div>
+
+          <!-- Custom Firebase Config for External Hosting (Netlify / GitHub Pages / Vercel) -->
+          <div class="bg-sky-50/70 p-4 rounded-2xl border border-sky-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-slate-900 text-sm">Konfigurasi Firebase Cloud (Untuk Netlify / GitHub Pages)</h4>
+              <span id="adm-cloud-mode-label" class="px-2.5 py-0.5 rounded-full bg-sky-600 text-white text-[10px] font-bold">Environment Cloud</span>
+            </div>
+            <p class="text-xs text-slate-600">
+              Jika file <code class="bg-white px-1.5 py-0.5 rounded border border-sky-200">index.html</code> di-hosting di luar platform ini (mis. Netlify atau GitHub Pages), tempel JSON <code class="bg-white px-1.5 py-0.5 rounded border border-sky-200">firebaseConfig</code> project Firebase Anda di bawah agar sinkronisasi lintas perangkat tetap aktif:
+            </p>
+            <textarea
+              id="adm-custom-firebase-json"
+              rows="3"
+              placeholder='{"apiKey":"...","authDomain":"...","projectId":"...","storageBucket":"...","messagingSenderId":"...","appId":"..."}'
+              class="w-full p-3 rounded-xl bg-white border border-slate-300 font-mono text-[11px] focus:outline-none focus:border-sky-500"
+            ></textarea>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" onclick="saveCustomFirebaseConfig()" class="px-4 py-2 rounded-full bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold">
+                Simpan & Hubungkan Firebase
+              </button>
+              <button type="button" onclick="clearCustomFirebaseConfig()" class="px-4 py-2 rounded-full bg-white border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-100">
+                Reset ke Default
+              </button>
+            </div>
+          </div>
+
+          <!-- Owner PIN -->
+          <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 space-y-3">
+            <h4 class="font-bold text-slate-900 text-sm">Ganti PIN Owner Admin (Tersimpan di Cloud)</h4>
+            <div class="flex gap-2 max-w-sm">
+              <input type="password" id="adm-new-pin" placeholder="PIN Baru (Min. 4 digit)" class="flex-1 px-3.5 py-2 rounded-xl bg-white border border-slate-300 text-xs" />
+              <button type="button" onclick="changeOwnerPin()" class="px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold">
+                Ubah PIN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toast-container" class="fixed top-20 right-4 z-[60] flex flex-col gap-2 pointer-events-none"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, doc, setDoc, addDoc, deleteDoc, onSnapshot, collection } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // =========================================================================
+    // 1. CONSTANTS, BOT CONFIG & OPTIONAL HARDCODED FIREBASE OVERRIDE
+    // =========================================================================
+    const BOT_TOKEN = '9263735891:AAHajDvYlub2CbUeE5v1lrdJ-bKwJOrr9dM';
+    const DEFAULT_ADMIN_CHAT_ID = '8536139561';
+    const DEFAULT_PIN = '4848';
+    const DEFAULT_HERO_IMG = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/1280px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg';
+
+    // Optional: Owner can paste their Firebase project config directly here before deploying to Netlify/GitHub Pages
+    const HARDCODED_FIREBASE_CONFIG = null;
+
+    const BASE_GENERATIONS = [
+      { gen: 1, name: 'Generasi 1', era: '2011', price: 20000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen1', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/JKT48_1st_Generation_2012.jpg/800px-JKT48_1st_Generation_2012.jpg', members: ['Melody', 'Nabilah', 'Shania', 'Haruka', 'Veranda', 'Gaby', 'Beby', 'Kinal'] },
+      { gen: 2, name: 'Generasi 2', era: '2012', price: 18000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen2', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/JKT48_Team_KIII_2014.jpg/800px-JKT48_Team_KIII_2014.jpg', members: ['Yupi', 'Rona', 'Vienny', 'Yona', 'Nadila', 'Sinka', 'Natalia', 'Hanna'] },
+      { gen: 3, name: 'Generasi 3', era: '2014', price: 20000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen3', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/JKT48_Team_T_2015.jpg/800px-JKT48_Team_T_2015.jpg', members: ['Shani', 'Gracia', 'Desy', 'Okta', 'Feni', 'Michelle', 'Anin', 'Sisca'] },
+      { gen: 4, name: 'Generasi 4', era: '2015', price: 15000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen4', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Jinan', 'Celine', 'Devi', 'Lisa', 'Christy', 'Melati', 'Yuri', 'Fidly'] },
+      { gen: 5, name: 'Generasi 5', era: '2016', price: 15000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen5', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/JKT48_perform_at_Jak-Japan_Matsuri_2018.jpg/800px-JKT48_perform_at_Jak-Japan_Matsuri_2018.jpg', members: ['Zara', 'Aya', 'Violet', 'Eve', 'Julie', 'Regina', 'Citra', 'Ruth'] },
+      { gen: 6, name: 'Generasi 6', era: '2018', price: 14000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen6', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/JKT48_perform_at_Jak-Japan_Matsuri_2018.jpg/800px-JKT48_perform_at_Jak-Japan_Matsuri_2018.jpg', members: ['Gita', 'Ariel', 'Dey', 'Erika', 'Nanda', 'Tasya', 'Shalza', 'Putri'] },
+      { gen: 7, name: 'Generasi 7', era: '2018', price: 20000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen7', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Christy', 'Zee', 'Muthe', 'Eli', 'Freya', 'Jessi', 'Olla', 'Chika', 'Febri'] },
+      { gen: 8, name: 'Generasi 8', era: '2019', price: 18000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen8', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Fiony', 'Flora', 'Lulu', 'Oniel', 'Adel', 'Mira', 'Ume', 'Ara'] },
+      { gen: 9, name: 'Generasi 9', era: '2019', price: 18000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen9', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Marsha', 'Kathrina', 'Indah', 'Ashel', 'Shinta', 'Caithlyn', 'Chalista'] },
+      { gen: 10, name: 'Generasi 10', era: '2020', price: 16000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen10', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Ella', 'Amanda', 'Indira', 'Lia', 'Lyn', 'Raisha', 'Callie', 'Giselle'] },
+      { gen: 11, name: 'Generasi 11', era: '2022', price: 16000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen11', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Michie', 'Gracie', 'Greesel', 'Cathy', 'Elin', 'Danella', 'Daisy', 'Alya', 'Anindya', 'Jeane'] },
+      { gen: 12, name: 'Generasi 12', era: '2023', price: 15000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen12', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Fritzy', 'Lana', 'Nachia', 'Erine', 'Trisha', 'Kimmy', 'Lily', 'Levi', 'Nala', 'Nayla', 'Oline', 'Regie', 'Ribka', 'Moreen'] },
+      { gen: 13, name: 'Generasi 13', era: '2024', price: 12000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen13', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Virgi', 'Auwia', 'Rilly', 'Giaa', 'Ekin', 'Jemima', 'Mikaela', 'Intan', 'Maira'] },
+      { gen: 14, name: 'Generasi 14', era: '2025/2026', price: 10000, vipLink: 'https://t.me/+JKT48FORALL_VIP_Gen14', photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg/800px-JKT48_at_JKT48_10th_Anniversary_Concert_Heaven.jpg', members: ['Trainee Generasi 14 Terbaru JKT48'] }
+    ];
+
+    // =========================================================================
+    // 2. HTML5 CANVAS IMAGE COMPRESSION (GUARANTEES < 1MB FIRESTORE SYNC)
+    // =========================================================================
+    function compressImageFile(file, maxWidth = 900, quality = 0.78) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = new Image();
+          img.onload = () => {
+            let width = img.width;
+            let height = img.height;
+            if (width > maxWidth) {
+              height = Math.round((height * maxWidth) / width);
+              width = maxWidth;
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+            const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
+            resolve(compressedDataUrl);
+          };
+          img.onerror = () => reject(new Error('Gagal memproses gambar.'));
+          img.src = e.target.result;
+        };
+        reader.onerror = () => reject(new Error('Gagal membaca file.'));
+        reader.readAsDataURL(file);
+      });
+    }
+
+    // =========================================================================
+    // 3. STATE & FIREBASE CLOUD INITIALIZATION
+    // =========================================================================
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'jkt48forall-prod';
+    let fbDb = null;
+    let fbAuth = null;
+    let fbUser = null;
+    let isCloudConnected = false;
+
+    let state = {
+      generations: BASE_GENERATIONS.map(g => ({ ...g })),
+      selectedGens: new Set(),
+      unlockedGens: new Set(),
+      customPreviews: [],
+      cloudOrders: [],
+      activePreviewGen: 1,
+      heroImage: DEFAULT_HERO_IMG,
+      adminPin: DEFAULT_PIN,
+      adminChatId: DEFAULT_ADMIN_CHAT_ID,
+      isAdminAuthenticated: false
+    };
+
+    function updateCloudIndicator(connected, labelText) {
+      isCloudConnected = connected;
+      const dot = document.getElementById('cloud-status-dot');
+      const txt = document.getElementById('cloud-status-text');
+      const modeLbl = document.getElementById('adm-cloud-mode-label');
+
+      if (dot && txt) {
+        if (connected) {
+          dot.className = 'w-2 h-2 rounded-full bg-teal-400';
+          txt.textContent = labelText || 'LIVE';
+          txt.className = 'text-[10px] font-bold tracking-wider text-teal-300 uppercase';
+        } else {
+          dot.className = 'w-2 h-2 rounded-full bg-amber-400';
+          txt.textContent = labelText || 'LOCAL';
+          txt.className = 'text-[10px] font-semibold tracking-wider text-amber-300 uppercase';
+        }
+      }
+      if (modeLbl) {
+        modeLbl.textContent = connected ? 'Cloud Tersambung' : 'Mode Offline / Lokal';
+      }
+    }
+
+    function resolveFirebaseConfig() {
+      // 1. Check owner-saved custom Firebase config in localStorage (for Netlify/GitHub Pages)
+      try {
+        const customRaw = localStorage.getItem('jkt48forall_custom_fb_config');
+        if (customRaw) {
+          const parsed = JSON.parse(customRaw);
+          if (parsed && parsed.apiKey && parsed.projectId) return parsed;
+        }
+      } catch (e) {}
+
+      // 2. Check hardcoded Firebase config if provided by owner
+      if (HARDCODED_FIREBASE_CONFIG && HARDCODED_FIREBASE_CONFIG.apiKey) {
+        return HARDCODED_FIREBASE_CONFIG;
+      }
+
+      // 3. Check environment __firebase_config
+      if (typeof __firebase_config !== 'undefined' && __firebase_config) {
+        try {
+          const envParsed = typeof __firebase_config === 'string'
+            ? JSON.parse(__firebase_config)
+            : __firebase_config;
+          if (envParsed && envParsed.apiKey) return envParsed;
+        } catch (e) {}
+      }
+
+      return null;
+    }
+
+    async function initFirebaseCloud() {
+      const config = resolveFirebaseConfig();
+      if (!config) {
+        updateCloudIndicator(false, 'LOCAL');
+        return;
+      }
+
+      try {
+        const app = initializeApp(config);
+        fbAuth = getAuth(app);
+        fbDb = getFirestore(app);
+
+        // RULE 3: Authenticate BEFORE any Firestore operations
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+          await signInWithCustomToken(fbAuth, __initial_auth_token);
+        } else {
+          await signInAnonymously(fbAuth);
+        }
+
+        fbUser = fbAuth.currentUser;
+        onAuthStateChanged(fbAuth, (user) => {
+          fbUser = user;
+        });
+
+        if (!fbUser) {
+          updateCloudIndicator(false, 'LOCAL');
+          return;
+        }
+
+        updateCloudIndicator(true, 'LIVE');
+        subscribeToCloudData();
+      } catch (err) {
+        console.warn('Firebase init fallback to local:', err);
+        updateCloudIndicator(false, 'LOCAL');
+      }
+    }
+
+    // RULE 1 & RULE 2: Strict /artifacts/{appId}/public/data/{collectionName} path + simple collection queries
+    function subscribeToCloudData() {
+      if (!fbDb || !fbUser) return;
+
+      // 1. Subscribe to Site Config Document (Hero Banner, Admin PIN, Admin Chat ID)
+      const siteConfigDocRef = doc(fbDb, 'artifacts', appId, 'public', 'data', 'site_config', 'main');
+      onSnapshot(siteConfigDocRef, (snap) => {
+        if (snap.exists()) {
+          const data = snap.data();
+          if (data.heroBannerUrl) {
+            state.heroImage = data.heroBannerUrl;
+            const heroImgEl = document.getElementById('hero-all-members-img');
+            const admHeroEl = document.getElementById('admin-hero-preview');
+            if (heroImgEl) heroImgEl.src = state.heroImage;
+            if (admHeroEl) admHeroEl.src = state.heroImage;
+          }
+          if (data.adminPin) {
+            state.adminPin = String(data.adminPin);
+          }
+          if (data.adminChatId) {
+            state.adminChatId = String(data.adminChatId);
+            const chatIdInput = document.getElementById('adm-bot-chat-id');
+            if (chatIdInput) chatIdInput.value = state.adminChatId;
+          }
+        }
+      }, (err) => {
+        console.warn('site_config listener error:', err);
+      });
+
+      // 2. Subscribe to Generations Collection (Gen 1-14 prices, VIP links, cover photos)
+      const gensColRef = collection(fbDb, 'artifacts', appId, 'public', 'data', 'generations');
+      onSnapshot(gensColRef, (snapshot) => {
+        if (!snapshot.empty) {
+          const cloudMap = new Map();
+          snapshot.forEach(docSnap => {
+            const d = docSnap.data();
+            if (d && d.gen) cloudMap.set(Number(d.gen), d);
+          });
+
+          state.generations = BASE_GENERATIONS.map(base => {
+            const override = cloudMap.get(base.gen);
+            return override
+              ? {
+                  ...base,
+                  price: override.price !== undefined ? Number(override.price) : base.price,
+                  vipLink: override.vipLink || base.vipLink,
+                  photo: override.photo || base.photo
+                }
+              : { ...base };
+          });
+
+          persistGenerationsLocal();
+          renderGenerationCards();
+          if (state.isAdminAuthenticated) renderAdminGenerationsEditor();
+          if (!document.getElementById('price-list-modal').classList.contains('hidden')) {
+            renderPriceListRows();
+          }
+        }
+      }, (err) => {
+        console.warn('generations listener error:', err);
+      });
+
+      // 3. Subscribe to Preview Media Collection (Custom uploaded photos & video clips)
+      const previewsColRef = collection(fbDb, 'artifacts', appId, 'public', 'data', 'preview_media');
+      onSnapshot(previewsColRef, (snapshot) => {
+        const items = [];
+        snapshot.forEach(docSnap => {
+          items.push({ id: docSnap.id, ...docSnap.data() });
+        });
+        items.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+        state.customPreviews = items;
+
+        if (state.isAdminAuthenticated) renderAdminUploadedPreviewsList();
+        if (!document.getElementById('preview-modal').classList.contains('hidden')) {
+          openPreviewModal(state.activePreviewGen);
+        }
+      }, (err) => {
+        console.warn('preview_media listener error:', err);
+      });
+
+      // 4. Subscribe to Orders Collection (Real-time order log for Owner Admin Studio)
+      const ordersColRef = collection(fbDb, 'artifacts', appId, 'public', 'data', 'orders');
+      onSnapshot(ordersColRef, (snapshot) => {
+        const orders = [];
+        snapshot.forEach(docSnap => {
+          orders.push({ docId: docSnap.id, ...docSnap.data() });
+        });
+        orders.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+        state.cloudOrders = orders;
+        if (state.isAdminAuthenticated) renderAdminOrdersList();
+      }, (err) => {
+        console.warn('orders listener error:', err);
+      });
+    }
+
+    async function syncSiteConfigToCloud(partialData) {
+      if (!fbDb || !fbUser) return false;
+      try {
+        const docRef = doc(fbDb, 'artifacts', appId, 'public', 'data', 'site_config', 'main');
+        await setDoc(docRef, {
+          ...partialData,
+          updatedAt: Date.now()
+        }, { merge: true });
+        return true;
+      } catch (err) {
+        console.error('Failed syncing site_config:', err);
+        return false;
+      }
+    }
+
+    async function syncGenerationToCloud(genObj) {
+      if (!fbDb || !fbUser) return false;
+      try {
+        const docRef = doc(fbDb, 'artifacts', appId, 'public', 'data', 'generations', `gen_${genObj.gen}`);
+        await setDoc(docRef, {
+          gen: genObj.gen,
+          name: genObj.name,
+          era: genObj.era,
+          price: Number(genObj.price),
+          vipLink: genObj.vipLink,
+          photo: genObj.photo,
+          updatedAt: Date.now()
+        }, { merge: true });
+        return true;
+      } catch (err) {
+        console.error(`Failed syncing gen_${genObj.gen}:`, err);
+        return false;
+      }
+    }
+
+    // =========================================================================
+    // 4. LOCAL CACHE FALLBACK HELPERS
+    // =========================================================================
+    function loadLocalFallbackState() {
+      try {
+        const rawGens = localStorage.getItem('jkt48forall_gens_v2');
+        if (rawGens) {
+          const saved = JSON.parse(rawGens);
+          state.generations = BASE_GENERATIONS.map(base => {
+            const match = saved.find(s => s.gen === base.gen);
+            return match ? { ...base, ...match } : { ...base };
+          });
+        }
+        const savedHero = localStorage.getItem('jkt48forall_hero_v2');
+        if (savedHero) {
+          state.heroImage = savedHero;
+          document.getElementById('hero-all-members-img').src = savedHero;
+        }
+        const savedPin = localStorage.getItem('jkt48forall_owner_pin');
+        if (savedPin) state.adminPin = savedPin;
+
+        const savedChatId = localStorage.getItem('jkt48forall_bot_chat_id');
+        if (savedChatId) state.adminChatId = savedChatId;
+
+        const rawUnlocked = localStorage.getItem('jkt48forall_unlocked_v2');
+        if (rawUnlocked) JSON.parse(rawUnlocked).forEach(n => state.unlockedGens.add(Number(n)));
+      } catch (e) {}
+      updateVipNavBadge();
+    }
+
+    function persistGenerationsLocal() {
+      try {
+        localStorage.setItem('jkt48forall_gens_v2', JSON.stringify(state.generations));
+      } catch (e) {}
+    }
+
+    function persistUnlockedHistory() {
+      try {
+        localStorage.setItem('jkt48forall_unlocked_v2', JSON.stringify([...state.unlockedGens]));
+      } catch (e) {}
+      updateVipNavBadge();
+    }
+
+    function formatRp(amount) {
+      return 'Rp ' + Number(amount || 0).toLocaleString('id-ID');
+    }
+
+    // =========================================================================
+    // 5. BUNDLE DISCOUNT ENGINE
+    // =========================================================================
+    function calculateCart() {
+      const selectedList = [...state.selectedGens]
+        .sort((a, b) => a - b)
+        .map(num => state.generations.find(g => g.gen === num))
+        .filter(Boolean);
+
+      const count = selectedList.length;
+      const subtotal = selectedList.reduce((acc, g) => acc + Number(g.price), 0);
+
+      let discountPercent = 0;
+      if (count === 2) discountPercent = 15;
+      else if (count === 3) discountPercent = 25;
+      else if (count >= 4) discountPercent = 35;
+
+      const discountAmount = Math.round((subtotal * discountPercent) / 100);
+      const total = subtotal - discountAmount;
+
+      return { items: selectedList, count, subtotal, discountPercent, discountAmount, total };
+    }
+
+    // =========================================================================
+    // 6. MINIMALIST GENERATION CARDS & FLOATING BAR
+    // =========================================================================
+    function renderGenerationCards() {
+      const grid = document.getElementById('generation-grid');
+      if (!grid) return;
+
+      grid.innerHTML = state.generations.map(g => {
+        const isSelected = state.selectedGens.has(g.gen);
+        const isUnlocked = state.unlockedGens.has(g.gen);
+
+        return `
+          <div class="group bg-white rounded-2xl border ${isSelected ? 'border-sky-500 ring-2 ring-sky-500/20 shadow-md' : 'border-slate-200/80 hover:border-sky-300 shadow-sm'} overflow-hidden transition-all flex flex-col">
+            <!-- Cover Photo with Clean Corner Tag -->
+            <div class="relative aspect-[16/10] bg-[#061226] overflow-hidden cursor-pointer" onclick="openPreviewModal(${g.gen})">
+              <img
+                src="${g.photo}"
+                onerror="this.onerror=null;this.src='https://placehold.co/800x500/0b1d3a/38bdf8?text=JKT48+GEN+${g.gen}';"
+                alt="${g.name}"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061226]/65 via-transparent to-transparent"></div>
+
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#061226]/85 backdrop-blur-md text-white font-bold text-[11px] tracking-wider border border-white/15">
+                GEN ${g.gen}
+              </span>
+
+              ${isUnlocked ? `
+                <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-teal-500 text-white font-bold text-[10px] tracking-wide">
+                  VIP AKTIF
+                </span>
+              ` : ''}
+            </div>
+
+            <!-- Minimalist Card Body -->
+            <div class="p-4 flex-1 flex flex-col justify-between gap-3.5">
+              <div>
+                <div class="flex items-baseline justify-between gap-2">
+                  <h4 class="font-bold text-base text-slate-900">${g.name}</h4>
+                  <span class="font-extrabold text-sm text-sky-600 shrink-0">${formatRp(g.price)}</span>
+                </div>
+                <p class="text-xs text-slate-500 truncate mt-1">
+                  ${g.era} • ${g.members.slice(0, 4).join(', ')}
+                </p>
+              </div>
+
+              <!-- 2 Clean Side-by-Side Buttons -->
+              <div class="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onclick="openPreviewModal(${g.gen})"
+                  class="py-2 px-3 rounded-full border border-slate-200 hover:border-sky-400 hover:text-sky-600 text-slate-700 font-semibold text-xs transition"
+                >
+                  Preview
+                </button>
+                <button
+                  type="button"
+                  onclick="toggleGenSelection(${g.gen})"
+                  class="py-2 px-3 rounded-full font-semibold text-xs transition ${
+                    isSelected
+                      ? 'bg-sky-500 text-white shadow-sm'
+                      : 'bg-sky-50 hover:bg-sky-100 text-sky-700'
+                  }"
+                >
+                  ${isSelected ? 'Terpilih ✓' : 'Pilih'}
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      updateFloatingCheckoutBar();
+    }
+
+    function toggleGenSelection(genNum) {
+      if (state.selectedGens.has(genNum)) {
+        state.selectedGens.delete(genNum);
+      } else {
+        state.selectedGens.add(genNum);
+      }
+      renderGenerationCards();
+      if (!document.getElementById('price-list-modal').classList.contains('hidden')) {
+        renderPriceListRows();
+      }
+    }
+
+    function clearAllSelections() {
+      state.selectedGens.clear();
+      renderGenerationCards();
+    }
+
+    function updateFloatingCheckoutBar() {
+      const bar = document.getElementById('floating-checkout-bar');
+      const resetBtn = document.getElementById('btn-reset-selection');
+      const cart = calculateCart();
+
+      if (cart.count > 0) {
+        bar.classList.remove('translate-y-28', 'opacity-0');
+        resetBtn.classList.remove('hidden');
+
+        document.getElementById('bar-gen-count').textContent = `${cart.count} Gen Dipilih`;
+        document.getElementById('bar-total-price').textContent = formatRp(cart.total);
+
+        const discBadge = document.getElementById('bar-discount-badge');
+        const origEl = document.getElementById('bar-original-price');
+        if (cart.discountPercent > 0) {
+          discBadge.classList.remove('hidden');
+          discBadge.textContent = `Hemat ${cart.discountPercent}%`;
+          origEl.classList.remove('hidden');
+          origEl.textContent = formatRp(cart.subtotal);
+        } else {
+          discBadge.classList.add('hidden');
+          origEl.classList.add('hidden');
+        }
+      } else {
+        bar.classList.add('translate-y-28', 'opacity-0');
+        resetBtn.classList.add('hidden');
+      }
+    }
+
+    // =========================================================================
+    // 7. PRICE LIST MODAL ("LIHAT HARGA")
+    // =========================================================================
+    function openPriceListModal() {
+      renderPriceListRows();
+      openModal('price-list-modal');
+    }
+
+    function renderPriceListRows() {
+      const container = document.getElementById('price-list-rows');
+      if (!container) return;
+
+      container.innerHTML = state.generations.map(g => {
+        const selected = state.selectedGens.has(g.gen);
+        return `
+          <div class="p-3 sm:px-4 flex items-center justify-between gap-3 ${selected ? 'bg-sky-50/80' : 'bg-white hover:bg-slate-50'} transition">
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-full bg-sky-500 text-white text-[10px] font-bold shrink-0">GEN ${g.gen}</span>
+                <span class="font-bold text-xs sm:text-sm text-slate-900">${g.name}</span>
+                <span class="text-[11px] text-slate-400">(${g.era})</span>
+              </div>
+              <p class="text-[11px] text-slate-500 truncate mt-0.5">${g.members.join(', ')}</p>
+            </div>
+
+            <div class="flex items-center gap-3 shrink-0">
+              <span class="font-bold text-xs sm:text-sm text-sky-600">${formatRp(g.price)}</span>
+              <button
+                type="button"
+                onclick="toggleGenSelection(${g.gen})"
+                class="px-3.5 py-1.5 rounded-full text-xs font-semibold transition ${
+                  selected
+                    ? 'bg-sky-500 text-white'
+                    : 'bg-sky-50 hover:bg-sky-100 text-sky-700'
+                }"
+              >
+                ${selected ? 'Terpilih ✓' : 'Pilih'}
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const cart = calculateCart();
+      document.getElementById('pl-selected-count').textContent = `${cart.count} Gen`;
+      document.getElementById('pl-selected-total').textContent = cart.count > 0
+        ? `(${formatRp(cart.total)}${cart.discountPercent > 0 ? ` • Hemat ${cart.discountPercent}%` : ''})`
+        : '';
+    }
+
+    function proceedCheckoutFromPriceList() {
+      if (state.selectedGens.size === 0) {
+        showToast('Pilih minimal 1 generasi terlebih dahulu.', 'warning');
+        return;
+      }
+      closeModal('price-list-modal');
+      openCheckoutModal();
+    }
+
+    // =========================================================================
+    // 8. IDOL PREVIEW MODAL (PHOTO & VIDEO)
+    // =========================================================================
+    function openPreviewModal(genNum) {
+      state.activePreviewGen = Number(genNum);
+      const g = state.generations.find(item => item.gen === state.activePreviewGen) || state.generations[0];
+
+      document.getElementById('prev-gen-badge').textContent = `GEN ${g.gen}`;
+      document.getElementById('prev-modal-title').textContent = `${g.name} (${g.era})`;
+      document.getElementById('prev-modal-subtitle').textContent = `${g.members.length} Member • Foto & Video Preview`;
+      document.getElementById('prev-gen-price').textContent = formatRp(g.price);
+
+      const toggleBtn = document.getElementById('prev-toggle-cart-btn');
+      if (state.selectedGens.has(g.gen)) {
+        toggleBtn.textContent = 'Terpilih ✓';
+        toggleBtn.className = 'px-4 py-2.5 rounded-full bg-sky-100 border border-sky-300 text-sky-800 font-semibold text-xs sm:text-sm transition';
+      } else {
+        toggleBtn.textContent = '+ Tambah ke Paket';
+        toggleBtn.className = 'px-4 py-2.5 rounded-full border border-slate-300 bg-white hover:bg-slate-100 text-slate-800 font-semibold text-xs sm:text-sm transition';
+      }
+
+      const switcher = document.getElementById('prev-gen-switcher');
+      switcher.innerHTML = state.generations.map(item => `
+        <button
+          type="button"
+          onclick="openPreviewModal(${item.gen})"
+          class="px-3 py-1 rounded-full text-xs font-semibold shrink-0 transition ${
+            item.gen === g.gen
+              ? 'bg-sky-500 text-white'
+              : 'bg-white text-slate-600 hover:bg-slate-200/70 border border-slate-200'
+          }"
+        >
+          Gen ${item.gen}
+        </button>
+      `).join('');
+
+      const uploadedItems = state.customPreviews.filter(p => Number(p.gen) === g.gen);
+      const mediaList = [
+        { id: `official-${g.gen}`, type: 'image', url: g.photo, caption: `Foto Resmi ${g.name} (${g.era})` },
+        ...uploadedItems
+      ];
+
+      document.getElementById('prev-media-count').textContent = `${mediaList.length} Media`;
+
+      const thumbsGrid = document.getElementById('prev-thumbs-grid');
+      thumbsGrid.innerHTML = mediaList.map((m, idx) => `
+        <button
+          type="button"
+          onclick="selectPreviewMediaItem(${idx})"
+          class="group relative aspect-video rounded-xl overflow-hidden border-2 ${idx === 0 ? 'border-sky-500' : 'border-slate-200 hover:border-sky-400'} bg-slate-900 text-left transition"
+          id="prev-thumb-btn-${idx}"
+        >
+          ${m.type === 'video'
+            ? `<div class="w-full h-full flex flex-col items-center justify-center bg-slate-900 text-white p-1">
+                 <i data-lucide="video" class="w-5 h-5 text-sky-400"></i>
+                 <span class="text-[10px] font-bold mt-1">VIDEO</span>
+               </div>`
+            : `<img src="${m.url}" onerror="this.onerror=null;this.src='https://placehold.co/400x250/0b1d3a/38bdf8?text=Gen+${g.gen}';" class="w-full h-full object-cover" />`
+          }
+          <span class="absolute bottom-1 left-1 right-1 px-1.5 py-0.5 rounded bg-black/70 text-[9px] text-white truncate">
+            ${m.caption}
+          </span>
+        </button>
+      `).join('');
+
+      window._currentPreviewMediaList = mediaList;
+      selectPreviewMediaItem(0);
+
+      document.getElementById('prev-members-list').innerHTML = g.members.map(name => `
+        <span class="px-2.5 py-1 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-700">
+          ${name}
+        </span>
+      `).join('');
+
+      lucide.createIcons();
+      openModal('preview-modal');
+    }
+
+    function selectPreviewMediaItem(idx) {
+      const list = window._currentPreviewMediaList || [];
+      const item = list[idx];
+      if (!item) return;
+
+      const imgEl = document.getElementById('prev-main-image');
+      const vidEl = document.getElementById('prev-main-video');
+      vidEl.pause();
+
+      if (item.type === 'video') {
+        imgEl.classList.add('hidden');
+        vidEl.classList.remove('hidden');
+        vidEl.src = item.url;
+      } else {
+        vidEl.classList.add('hidden');
+        vidEl.src = '';
+        imgEl.classList.remove('hidden');
+        imgEl.src = item.url;
+      }
+
+      document.getElementById('prev-caption-text').textContent = item.caption;
+
+      list.forEach((_, i) => {
+        const btn = document.getElementById(`prev-thumb-btn-${i}`);
+        if (btn) {
+          btn.classList.toggle('border-sky-500', i === idx);
+          btn.classList.toggle('border-slate-200', i !== idx);
+        }
+      });
+    }
+
+    function toggleCurrentPreviewInCart() {
+      toggleGenSelection(state.activePreviewGen);
+      openPreviewModal(state.activePreviewGen);
+    }
+
+    function buyCurrentPreviewNow() {
+      state.selectedGens.add(state.activePreviewGen);
+      renderGenerationCards();
+      closeModal('preview-modal');
+      openCheckoutModal();
+    }
+
+    // =========================================================================
+    // 9. QRIS CHECKOUT, FIRESTORE ORDER LOG & TELEGRAM BOT REPORT
+    // =========================================================================
+    function renderQrisVectorMatrix() {
+      const svg = document.getElementById('qris-svg-matrix');
+      if (!svg || svg.dataset.rendered) return;
+
+      const size = 21;
+      const cell = 10;
+      let rects = '';
+
+      function isFinder(r, c) {
+        return (r < 7 && c < 7) || (r < 7 && c >= size - 7) || (r >= size - 7 && c < 7);
+      }
+
+      for (let r = 0; r < size; r++) {
+        for (let c = 0; c < size; c++) {
+          let fill = false;
+          if (isFinder(r, c)) {
+            const lr = r >= size - 7 ? r - (size - 7) : r;
+            const lc = c >= size - 7 ? c - (size - 7) : c;
+            fill = (lr === 0 || lr === 6 || lc === 0 || lc === 6 || (lr >= 2 && lr <= 4 && lc >= 2 && lc <= 4));
+          } else {
+            const hash = ((r * 31 + c * 17 + r * c) % 7);
+            fill = (hash === 0 || hash === 2 || hash === 5);
+          }
+          if (fill) {
+            rects += `<rect x="${c * cell}" y="${r * cell}" width="${cell}" height="${cell}" fill="#0f172a" rx="1.5"/>`;
+          }
+        }
+      }
+      svg.innerHTML = rects;
+      svg.dataset.rendered = 'true';
+    }
+
+    function openCheckoutModal() {
+      const cart = calculateCart();
+      if (cart.count === 0) {
+        showToast('Pilih minimal 1 generasi terlebih dahulu.', 'warning');
+        return;
+      }
+
+      renderQrisVectorMatrix();
+
+      document.getElementById('chk-selected-chips').innerHTML = cart.items.map(g => `
+        <span class="px-2.5 py-1 rounded-full bg-white border border-sky-200 text-xs font-bold text-sky-900">
+          Gen ${g.gen} (${formatRp(g.price)})
+        </span>
+      `).join('');
+
+      const discPill = document.getElementById('chk-discount-pill');
+      const origTotal = document.getElementById('chk-original-total');
+      if (cart.discountPercent > 0) {
+        discPill.classList.remove('hidden');
+        discPill.textContent = `Hemat ${cart.discountPercent}% (-${formatRp(cart.discountAmount)})`;
+        origTotal.classList.remove('hidden');
+        origTotal.textContent = formatRp(cart.subtotal);
+      } else {
+        discPill.classList.add('hidden');
+        origTotal.classList.add('hidden');
+      }
+
+      document.getElementById('chk-final-total').textContent = formatRp(cart.total);
+      document.getElementById('qris-amount-display').textContent = formatRp(cart.total);
+      document.getElementById('chk-confirm-paid').checked = false;
+
+      openModal('checkout-modal');
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+    }
+
+    async function dispatchTelegramReport(order, buyerName, receiptFile) {
+      const chatId = state.adminChatId || DEFAULT_ADMIN_CHAT_ID;
+      if (!chatId) return false;
+
+      const timeWIB = new Date().toLocaleString('id-ID', {
+        dateStyle: 'medium',
+        timeStyle: 'short'
+      }) + ' WIB';
+
+      const genLabels = order.gens.map(n => `Gen ${n}`).join(', ');
+      const captionText =
+        `✅ <b>LAPORAN PEMBAYARAN — JKT48FORALL</b>\n\n` +
+        `🆔 <b>ID Order:</b> <code>#${order.orderId}</code>\n` +
+        `👤 <b>Pembeli:</b> ${escapeHtml(buyerName || 'Member VIP')}\n` +
+        `📦 <b>Generasi:</b> ${genLabels} (${order.gens.length} Gen)\n` +
+        `💰 <b>Total Bayar:</b> ${formatRp(order.cart.total)}\n` +
+        `🕒 <b>Waktu:</b> ${timeWIB}\n` +
+        `🔓 <b>Status:</b> Link Grup VIP Otomatis Terbuka`;
+
+      try {
+        if (receiptFile) {
+          const formData = new FormData();
+          formData.append('chat_id', chatId);
+          formData.append('photo', receiptFile);
+          formData.append('caption', captionText);
+          formData.append('parse_mode', 'HTML');
+          const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+            method: 'POST',
+            body: formData
+          });
+          return res.ok;
+        } else {
+          const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: captionText,
+              parse_mode: 'HTML'
+            })
+          });
+          return res.ok;
+        }
+      } catch (err) {
+        return false;
+      }
+    }
+
+    async function logOrderToCloud(orderId, buyerName, purchasedGens, totalAmount) {
+      if (!fbDb || !fbUser) return;
+      try {
+        const ordersCol = collection(fbDb, 'artifacts', appId, 'public', 'data', 'orders');
+        await addDoc(ordersCol, {
+          orderId,
+          buyerName: buyerName || 'Member VIP',
+          gens: purchasedGens,
+          total: Number(totalAmount),
+          timestamp: Date.now()
+        });
+      } catch (err) {
+        console.warn('Order cloud log skipped:', err);
+      }
+    }
+
+    async function confirmAndUnlockVip() {
+      const buyerName = document.getElementById('chk-buyer-name').value.trim();
+      const confirmed = document.getElementById('chk-confirm-paid').checked;
+      const receiptInput = document.getElementById('chk-receipt-file');
+      const receiptFile = receiptInput.files && receiptInput.files[0] ? receiptInput.files[0] : null;
+
+      if (!confirmed) {
+        showToast('Centang konfirmasi pembayaran terlebih dahulu.', 'warning');
+        return;
+      }
+
+      const btn = document.getElementById('btn-submit-payment');
+      const originalHtml = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<span>Memproses & Membuka Link VIP...</span>`;
+
+      const cart = calculateCart();
+      const orderId = 'JKT48-' + Math.floor(100000 + Math.random() * 900000);
+      const purchasedGens = cart.items.map(g => g.gen);
+
+      await Promise.all([
+        dispatchTelegramReport({ orderId, gens: purchasedGens, cart }, buyerName, receiptFile),
+        logOrderToCloud(orderId, buyerName, purchasedGens, cart.total)
+      ]);
+
+      purchasedGens.forEach(genNum => state.unlockedGens.add(genNum));
+      persistUnlockedHistory();
+
+      state.selectedGens.clear();
+      receiptInput.value = '';
+      renderGenerationCards();
+
+      btn.disabled = false;
+      btn.innerHTML = originalHtml;
+      closeModal('checkout-modal');
+
+      document.getElementById('vip-order-ref').textContent = `Order #${orderId} • Laporan terkirim ke @laporanbayar_bot`;
+      document.getElementById('vip-unlocked-links-list').innerHTML = cart.items.map(g => `
+        <div class="p-3.5 rounded-2xl bg-sky-50/80 border border-sky-200 flex items-center justify-between gap-3">
+          <div class="min-w-0">
+            <span class="px-2 py-0.5 rounded-full bg-sky-500 text-white text-[10px] font-bold">GEN ${g.gen}</span>
+            <h4 class="font-bold text-sm text-slate-900 mt-1">${g.name}</h4>
+            <p class="text-[11px] text-slate-500 truncate">${g.vipLink}</p>
+          </div>
+          <a
+            href="${g.vipLink}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-semibold text-xs shadow transition"
+          >
+            <span>Buka Grup</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+      openModal('vip-success-modal');
+    }
+
+    // =========================================================================
+    // 10. VIP HISTORY ("VIP" NAV LINK)
+    // =========================================================================
+    function updateVipNavBadge() {
+      const badge = document.getElementById('vip-nav-badge');
+      const count = state.unlockedGens.size;
+      if (count > 0) {
+        badge.classList.remove('hidden');
+        badge.textContent = count;
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    function openVipModal() {
+      const container = document.getElementById('vip-history-content');
+      const unlockedList = [...state.unlockedGens]
+        .sort((a, b) => a - b)
+        .map(num => state.generations.find(g => g.gen === num))
+        .filter(Boolean);
+
+      if (unlockedList.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-8 space-y-3">
+            <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
+              <i data-lucide="lock" class="w-5 h-5"></i>
+            </div>
+            <p class="text-sm font-bold text-slate-700">Belum ada grup VIP yang terbuka</p>
+            <p class="text-xs text-slate-500 max-w-xs mx-auto">Pilih generasi favoritmu dan selesaikan pembayaran QRIS untuk membuka link Telegram VIP secara otomatis.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = unlockedList.map(g => `
+          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+            <div class="min-w-0">
+              <span class="px-2 py-0.5 rounded-full bg-teal-600 text-white text-[10px] font-bold">VIP AKTIF • GEN ${g.gen}</span>
+              <h4 class="font-bold text-sm text-slate-900 mt-1">${g.name}</h4>
+              <p class="text-[11px] text-slate-500 truncate">${g.vipLink}</p>
+            </div>
+            <a
+              href="${g.vipLink}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-semibold text-xs transition"
+            >
+              <span>Masuk VIP</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        `).join('');
+      }
+
+      lucide.createIcons();
+      openModal('vip-history-modal');
+    }
+
+    // =========================================================================
+    // 11. OWNER ADMIN STUDIO (WITH REAL-TIME FIRESTORE SYNC)
+    // =========================================================================
+    function openAdminAuth() {
+      if (state.isAdminAuthenticated) {
+        openAdminStudio();
+        return;
+      }
+      document.getElementById('admin-pin-input').value = '';
+      document.getElementById('admin-pin-error').classList.add('hidden');
+      openModal('admin-pin-modal');
+      setTimeout(() => document.getElementById('admin-pin-input').focus(), 100);
+    }
+
+    function verifyAdminPin() {
+      const input = document.getElementById('admin-pin-input').value.trim();
+      if (input === state.adminPin) {
+        state.isAdminAuthenticated = true;
+        closeModal('admin-pin-modal');
+        openAdminStudio();
+      } else {
+        document.getElementById('admin-pin-error').classList.remove('hidden');
+      }
+    }
+
+    function openAdminStudio() {
+      document.getElementById('admin-hero-preview').src = state.heroImage;
+      renderAdminGenerationsEditor();
+
+      const genSelect = document.getElementById('adm-prev-gen-select');
+      genSelect.innerHTML = state.generations.map(g => `<option value="${g.gen}">${g.name} (Gen ${g.gen})</option>`).join('');
+      renderAdminUploadedPreviewsList();
+      renderAdminOrdersList();
+
+      document.getElementById('adm-bot-chat-id').value = state.adminChatId;
+      const customRaw = localStorage.getItem('jkt48forall_custom_fb_config') || '';
+      document.getElementById('adm-custom-firebase-json').value = customRaw;
+
+      switchAdminTab('hero');
+      openModal('admin-panel-modal');
+    }
+
+    function switchAdminTab(tabName) {
+      ['hero', 'gens', 'previews', 'bot'].forEach(t => {
+        document.getElementById(`admin-tab-${t}`).classList.toggle('hidden', t !== tabName);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabName) {
+          btn.className = 'admin-tab-btn px-3.5 py-2 rounded-full text-xs font-bold bg-sky-500 text-white shrink-0';
+        } else {
+          btn.className = 'admin-tab-btn px-3.5 py-2 rounded-full text-xs font-bold bg-white text-slate-600 hover:bg-slate-200/70 shrink-0';
+        }
+      });
+    }
+
+    async function handleHeroImageUpload(e) {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      try {
+        showToast('Mengompres & mengunggah banner ke cloud...', 'info');
+        const compressedDataUrl = await compressImageFile(file, 1100, 0.78);
+        state.heroImage = compressedDataUrl;
+        document.getElementById('hero-all-members-img').src = compressedDataUrl;
+        document.getElementById('admin-hero-preview').src = compressedDataUrl;
+        localStorage.setItem('jkt48forall_hero_v2', compressedDataUrl);
+
+        const synced = await syncSiteConfigToCloud({ heroBannerUrl: compressedDataUrl });
+        showToast(
+          synced ? 'Banner semua member tersinkronisasi live ke cloud!' : 'Banner diperbarui secara lokal.',
+          'success'
+        );
+      } catch (err) {
+        showToast('Gagal memproses gambar banner.', 'warning');
+      }
+    }
+
+    async function saveHeroImageUrl() {
+      const url = document.getElementById('admin-hero-url').value.trim();
+      if (!url) return;
+      state.heroImage = url;
+      document.getElementById('hero-all-members-img').src = url;
+      document.getElementById('admin-hero-preview').src = url;
+      localStorage.setItem('jkt48forall_hero_v2', url);
+
+      const synced = await syncSiteConfigToCloud({ heroBannerUrl: url });
+      showToast(
+        synced ? 'URL banner tersinkronisasi live ke semua pengunjung!' : 'URL banner diterapkan.',
+        'success'
+      );
+    }
+
+    async function resetHeroImageDefault() {
+      state.heroImage = DEFAULT_HERO_IMG;
+      document.getElementById('hero-all-members-img').src = DEFAULT_HERO_IMG;
+      document.getElementById('admin-hero-preview').src = DEFAULT_HERO_IMG;
+      localStorage.setItem('jkt48forall_hero_v2', DEFAULT_HERO_IMG);
+      await syncSiteConfigToCloud({ heroBannerUrl: DEFAULT_HERO_IMG });
+      showToast('Gambar banner dikembalikan ke default.', 'success');
+    }
+
+    function renderAdminGenerationsEditor() {
+      const list = document.getElementById('admin-gens-editor-list');
+      if (!list) return;
+      list.innerHTML = state.generations.map(g => `
+        <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
+          <div class="md:col-span-3 flex items-center gap-2.5">
+            <img src="${g.photo}" onerror="this.onerror=null;this.src='https://placehold.co/120x80/0b1d3a/38bdf8?text=G${g.gen}';" class="w-14 h-10 rounded-lg object-cover bg-slate-900 shrink-0" />
+            <div>
+              <span class="font-bold text-xs text-slate-900 block">${g.name}</span>
+              <span class="text-[10px] text-slate-500">Era ${g.era}</span>
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Harga (Rp)</label>
+            <input
+              type="number"
+              id="adm-gen-price-${g.gen}"
+              value="${g.price}"
+              step="1000"
+              class="w-full px-2.5 py-1.5 rounded-lg bg-white border border-slate-300 text-xs font-bold"
+            />
+          </div>
+
+          <div class="md:col-span-4">
+            <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Link Grup Telegram VIP</label>
+            <input
+              type="text"
+              id="adm-gen-viplink-${g.gen}"
+              value="${g.vipLink}"
+              class="w-full px-2.5 py-1.5 rounded-lg bg-white border border-slate-300 text-xs font-medium text-sky-700"
+            />
+          </div>
+
+          <div class="md:col-span-3">
+            <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">Ganti Foto Sampul</label>
+            <input
+              type="file"
+              accept="image/*"
+              onchange="handleGenCoverUpload(event, ${g.gen})"
+              class="w-full text-[10px] text-slate-600 file:mr-2 file:py-1 file:px-2.5 file:rounded-full file:border-0 file:text-[10px] file:font-semibold file:bg-sky-100 file:text-sky-700 cursor-pointer"
+            />
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function handleGenCoverUpload(e, genNum) {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      try {
+        showToast(`Mengunggah foto sampul Gen ${genNum}...`, 'info');
+        const compressed = await compressImageFile(file, 850, 0.78);
+        const g = state.generations.find(item => item.gen === genNum);
+        if (g) {
+          g.photo = compressed;
+          persistGenerationsLocal();
+          renderGenerationCards();
+          renderAdminGenerationsEditor();
+          await syncGenerationToCloud(g);
+          showToast(`Foto sampul ${g.name} tersinkronisasi live!`, 'success');
+        }
+      } catch (err) {
+        showToast('Gagal memproses foto sampul.', 'warning');
+      }
+    }
+
+    async function saveAllGenerationsConfig() {
+      state.generations.forEach(g => {
+        const priceEl = document.getElementById(`adm-gen-price-${g.gen}`);
+        const linkEl = document.getElementById(`adm-gen-viplink-${g.gen}`);
+        if (priceEl && Number(priceEl.value) >= 0) g.price = Number(priceEl.value);
+        if (linkEl && linkEl.value.trim()) g.vipLink = linkEl.value.trim();
+      });
+      persistGenerationsLocal();
+      renderGenerationCards();
+
+      if (fbDb && fbUser) {
+        showToast('Menyimpan semua perubahan ke cloud...', 'info');
+        await Promise.all(state.generations.map(g => syncGenerationToCloud(g)));
+        showToast('Semua harga & Link VIP tersinkronisasi live ke cloud!', 'success');
+      } else {
+        showToast('Perubahan disimpan secara lokal.', 'success');
+      }
+    }
+
+    async function uploadCustomPreviewMedia() {
+      const genNum = Number(document.getElementById('adm-prev-gen-select').value);
+      const captionInput = document.getElementById('adm-prev-caption');
+      const fileInput = document.getElementById('adm-prev-file');
+      const mediaUrlInput = document.getElementById('adm-prev-media-url');
+
+      const file = fileInput.files && fileInput.files[0];
+      const externalUrl = mediaUrlInput.value.trim();
+
+      if (!file && !externalUrl) {
+        showToast('Pilih file foto/video atau masukkan URL media terlebih dahulu.', 'warning');
+        return;
+      }
+
+      let mediaType = 'image';
+      let finalUrl = externalUrl;
+
+      try {
+        if (file) {
+          if (file.type.startsWith('video/')) {
+            mediaType = 'video';
+            if (file.size > 750 * 1024) {
+              showToast('File video di atas 750KB disarankan memakai URL video (.mp4) agar sinkron di semua HP.', 'warning');
+            }
+            finalUrl = await new Promise((res, rej) => {
+              const r = new FileReader();
+              r.onload = ev => res(ev.target.result);
+              r.onerror = rej;
+              r.readAsDataURL(file);
+            });
+          } else {
+            mediaType = 'image';
+            showToast('Mengompres foto preview untuk cloud...', 'info');
+            finalUrl = await compressImageFile(file, 900, 0.78);
+          }
+        } else if (externalUrl) {
+          mediaType = /\.(mp4|webm|ogg|mov)(\?.*)?$/i.test(externalUrl) ? 'video' : 'image';
+        }
+
+        const caption = captionInput.value.trim() || `${mediaType === 'video' ? 'Video' : 'Foto'} Preview Gen ${genNum}`;
+
+        if (fbDb && fbUser) {
+          const previewsCol = collection(fbDb, 'artifacts', appId, 'public', 'data', 'preview_media');
+          await addDoc(previewsCol, {
+            gen: genNum,
+            type: mediaType,
+            url: finalUrl,
+            caption,
+            createdAt: Date.now()
+          });
+          showToast(`Preview ${mediaType === 'video' ? 'video' : 'foto'} Gen ${genNum} tersinkronisasi live!`, 'success');
+        } else {
+          state.customPreviews.unshift({
+            id: 'local-' + Date.now(),
+            gen: genNum,
+            type: mediaType,
+            url: finalUrl,
+            caption,
+            createdAt: Date.now()
+          });
+          renderAdminUploadedPreviewsList();
+          showToast(`Preview ditambahkan secara lokal.`, 'success');
+        }
+
+        captionInput.value = '';
+        fileInput.value = '';
+        mediaUrlInput.value = '';
+      } catch (err) {
+        showToast('Gagal menyimpan media preview.', 'warning');
+      }
+    }
+
+    function renderAdminUploadedPreviewsList() {
+      const container = document.getElementById('adm-uploaded-previews-list');
+      if (!container) return;
+      if (state.customPreviews.length === 0) {
+        container.innerHTML = `<p class="text-xs text-slate-400 col-span-2 py-4 text-center bg-slate-50 rounded-xl border border-dashed border-slate-300">Belum ada media preview tambahan di cloud.</p>`;
+        return;
+      }
+
+      container.innerHTML = state.customPreviews.map(item => `
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="px-2 py-0.5 rounded-full bg-sky-500 text-white text-[10px] font-bold shrink-0">GEN ${item.gen}</span>
+            <div class="min-w-0">
+              <p class="text-xs font-bold text-slate-800 truncate">${item.caption}</p>
+              <span class="text-[10px] font-semibold text-slate-500 uppercase">${item.type}</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            onclick="removeCustomPreviewMedia('${item.id}')"
+            class="px-3 py-1 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 text-[11px] font-semibold shrink-0"
+          >
+            Hapus
+          </button>
+        </div>
+      `).join('');
+    }
+
+    async function removeCustomPreviewMedia(id) {
+      if (fbDb && fbUser && !String(id).startsWith('local-')) {
+        try {
+          await deleteDoc(doc(fbDb, 'artifacts', appId, 'public', 'data', 'preview_media', id));
+          showToast('Media preview dihapus dari cloud.', 'success');
+          return;
+        } catch (err) {}
+      }
+      state.customPreviews = state.customPreviews.filter(p => p.id !== id);
+      renderAdminUploadedPreviewsList();
+      showToast('Media preview dihapus.', 'success');
+    }
+
+    function renderAdminOrdersList() {
+      const container = document.getElementById('adm-orders-list');
+      const countBadge = document.getElementById('adm-orders-count');
+      if (!container) return;
+
+      if (countBadge) countBadge.textContent = `${state.cloudOrders.length} Order`;
+
+      if (state.cloudOrders.length === 0) {
+        container.innerHTML = `<p class="text-xs text-slate-400 text-center py-3">Belum ada transaksi tercatat di cloud.</p>`;
+        return;
+      }
+
+      container.innerHTML = state.cloudOrders.map(o => {
+        const dt = o.timestamp
+          ? new Date(o.timestamp).toLocaleString('id-ID', { dateStyle: 'short', timeStyle: 'short' })
+          : '';
+        const gensText = Array.isArray(o.gens) ? o.gens.map(n => `Gen ${n}`).join(', ') : '-';
+        return `
+          <div class="p-2.5 rounded-xl bg-white border border-slate-200 flex items-center justify-between gap-2 text-xs">
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <span class="font-mono font-bold text-sky-700">#${o.orderId}</span>
+                <span class="text-slate-400">•</span>
+                <span class="font-semibold text-slate-800 truncate">${escapeHtml(o.buyerName || 'Member VIP')}</span>
+              </div>
+              <p class="text-[11px] text-slate-500 truncate mt-0.5">${gensText} ${dt ? `(${dt})` : ''}</p>
+            </div>
+            <span class="font-extrabold text-teal-600 shrink-0">${formatRp(o.total)}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function saveBotChatIdManual() {
+      const val = document.getElementById('adm-bot-chat-id').value.trim();
+      if (!val) return;
+      state.adminChatId = val;
+      localStorage.setItem('jkt48forall_bot_chat_id', val);
+      await syncSiteConfigToCloud({ adminChatId: val });
+      showToast(`ID Admin Telegram (${val}) tersimpan!`, 'success');
+    }
+
+    async function sendTestReportToBot() {
+      const chatId = state.adminChatId || DEFAULT_ADMIN_CHAT_ID;
+      if (!chatId) return;
+
+      try {
+        const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: `✅ <b>TEST NOTIFIKASI JKT48FORALL BERHASIL!</b>\nLaporan otomatis telah terhubung ke ID Admin <code>${chatId}</code> melalui @laporanbayar_bot.`,
+            parse_mode: 'HTML'
+          })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          showToast(`Pesan test berhasil dikirim ke ID ${chatId}!`, 'success');
+        } else {
+          showToast('Gagal kirim. Pastikan akun ID 8536139561 sudah klik Start di @laporanbayar_bot.', 'warning');
+        }
+      } catch (err) {
+        showToast('Gagal terhubung ke API Telegram.', 'warning');
+      }
+    }
+
+    async function changeOwnerPin() {
+      const newPin = document.getElementById('adm-new-pin').value.trim();
+      if (newPin.length < 4) {
+        showToast('PIN minimal 4 karakter.', 'warning');
+        return;
+      }
+      state.adminPin = newPin;
+      localStorage.setItem('jkt48forall_owner_pin', newPin);
+      await syncSiteConfigToCloud({ adminPin: newPin });
+      document.getElementById('adm-new-pin').value = '';
+      showToast('PIN Owner berhasil diperbarui & tersinkronisasi!', 'success');
+    }
+
+    function saveCustomFirebaseConfig() {
+      const raw = document.getElementById('adm-custom-firebase-json').value.trim();
+      if (!raw) {
+        showToast('Tempel JSON firebaseConfig terlebih dahulu.', 'warning');
+        return;
+      }
+      try {
+        const parsed = JSON.parse(raw);
+        if (!parsed.apiKey || !parsed.projectId) {
+          showToast('JSON harus memiliki apiKey dan projectId yang valid.', 'warning');
+          return;
+        }
+        localStorage.setItem('jkt48forall_custom_fb_config', JSON.stringify(parsed));
+        showToast('Konfigurasi Firebase disimpan! Memuat ulang untuk menyambungkan...', 'success');
+        setTimeout(() => window.location.reload(), 900);
+      } catch (e) {
+        showToast('Format JSON tidak valid. Pastikan tanda kutip lengkap.', 'warning');
+      }
+    }
+
+    function clearCustomFirebaseConfig() {
+      localStorage.removeItem('jkt48forall_custom_fb_config');
+      showToast('Konfigurasi kustom dihapus. Memuat ulang...', 'info');
+      setTimeout(() => window.location.reload(), 700);
+    }
+
+    // =========================================================================
+    // 12. MODAL, TOAST & GLOBAL WINDOW EXPORTS
+    // =========================================================================
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      }
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+      if (id === 'preview-modal') {
+        const vid = document.getElementById('prev-main-video');
+        if (vid) vid.pause();
+      }
+    }
+
+    function scrollToTop(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const colors = type === 'success'
+        ? 'bg-teal-600 text-white border-teal-400'
+        : type === 'warning'
+        ? 'bg-amber-500 text-slate-950 border-amber-300'
+        : 'bg-[#061226] text-white border-sky-500/40';
+
+      toast.className = `px-4 py-2.5 rounded-full border shadow-xl text-xs font-bold max-w-xs pointer-events-auto transition-all duration-300 ${colors}`;
+      toast.textContent = message;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-x-4');
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    // Expose functions globally for inline HTML handlers
+    Object.assign(window, {
+      scrollToTop,
+      openVipModal,
+      openAdminAuth,
+      verifyAdminPin,
+      openPreviewModal,
+      selectPreviewMediaItem,
+      toggleCurrentPreviewInCart,
+      buyCurrentPreviewNow,
+      openPriceListModal,
+      proceedCheckoutFromPriceList,
+      toggleGenSelection,
+      clearAllSelections,
+      openCheckoutModal,
+      confirmAndUnlockVip,
+      closeModal,
+      switchAdminTab,
+      handleHeroImageUpload,
+      saveHeroImageUrl,
+      resetHeroImageDefault,
+      handleGenCoverUpload,
+      saveAllGenerationsConfig,
+      uploadCustomPreviewMedia,
+      removeCustomPreviewMedia,
+      saveBotChatIdManual,
+      sendTestReportToBot,
+      changeOwnerPin,
+      saveCustomFirebaseConfig,
+      clearCustomFirebaseConfig
+    });
+
+    // =========================================================================
+    // 13. BOOTSTRAP APPLICATION
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', async () => {
+      loadLocalFallbackState();
+      renderGenerationCards();
+      lucide.createIcons();
+      await initFirebaseCloud();
+    });
+  </script>
+</body>
+</html>
